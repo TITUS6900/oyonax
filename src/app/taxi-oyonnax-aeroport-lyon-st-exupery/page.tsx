@@ -37,6 +37,11 @@ const facility: TransportFacility = {
       answer:
         "Oui, le Van VIP accueille jusqu'à 8 personnes et dispose d'un volume de coffre adapté aux bagages volumineux et housses à ski.",
     },
+    {
+      question: "Proposez-vous un tarif fixe pour ce trajet longue distance ?",
+      answer:
+        "Contactez-nous avant votre départ : nous vous communiquons une estimation basée sur la distance et l'horaire de votre trajet, conformément à la réglementation applicable aux taxis.",
+    },
   ],
 };
 

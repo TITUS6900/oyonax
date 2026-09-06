@@ -62,7 +62,7 @@ export const communes: Commune[] = [
     areaDetail: "au sud d'Oyonnax, vallée de la Bienne",
     metaTitle: "Taxi Groissiat (01100) | Taxi Oyonnax",
     metaDescription:
-      "Taxi conventionné à Groissiat pour vos rendez-vous médicaux, gares et aéroports. Licence taxi, chauffeur local, dispo 24h/24.",
+      "Taxi conventionné à Groissiat pour vos rendez-vous médicaux, gares et aéroports. Chauffeur local expérimenté, disponible 24h/24.",
   },
   {
     slug: "martignat",
@@ -110,6 +110,6 @@ export const communes: Commune[] = [
     areaDetail: "aux confins du Haut-Bugey et du Jura",
     metaTitle: "Taxi Dortan (01590) | Taxi Oyonnax",
     metaDescription:
-      "Taxi conventionné à Dortan : transport médical CPAM, transferts gares et aéroports. Taxi Oyonnax, licence taxi, dispo 7j/7.",
+      "Taxi conventionné à Dortan : transport médical CPAM, transferts gares et aéroports. Taxi Oyonnax, chauffeur pro, disponible 7j/7.",
   },
 ];

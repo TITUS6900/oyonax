@@ -37,6 +37,11 @@ const facility: TransportFacility = {
       answer:
         "Le tarif dépend de la distance parcourue et de l'heure du trajet, conformément à la réglementation applicable aux taxis. Contactez-nous pour une estimation avant réservation.",
     },
+    {
+      question: "Peut-on réserver un Van pour un groupe se rendant à la gare ?",
+      answer:
+        "Oui, notre Van VIP (1 à 8 personnes) convient parfaitement à un départ de groupe vers la Gare TGV de Bellegarde, bagages volumineux compris.",
+    },
   ],
 };
 

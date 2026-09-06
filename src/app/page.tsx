@@ -14,9 +14,9 @@ import { medicalLinks } from "@/lib/data/medical";
 import { transportLinks } from "@/lib/data/transport";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Taxi Oyonnax | Taxi conventionné CPAM & Van/Berline",
+  title: "Taxi Oyonnax | Taxi conventionné CPAM, Van & Berline VIP",
   description:
-    "Taxi conventionné CPAM à Oyonnax (01100) : VSL médical, Van & Berline pour gares, aéroports Genève/Lyon. Dispo 24h/24. Appelez !",
+    "Taxi conventionné CPAM à Oyonnax (01100) : VSL, Van & Berline pour gares, aéroports Genève/Lyon. Dispo 24h/24. Réservez par téléphone ou WhatsApp !",
   path: "/",
 });
 
@@ -92,7 +92,7 @@ export default function Home() {
       <Section title="Pourquoi choisir Taxi Oyonnax ?" muted>
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            `Licence de taxi ${BUSINESS.license} — ${BUSINESS.licenseAuthority}`,
+            "Chauffeur professionnel expérimenté & véhicules récents",
             "Conventionné CPAM pour le transport de patients assis (VSL)",
             "Disponible 24h/24, 7j/7, y compris jours fériés",
             "Réservation immédiate par téléphone ou WhatsApp",
@@ -107,35 +107,126 @@ export default function Home() {
         </ul>
       </Section>
 
-      <Section id="communes-desservies" title="Zones desservies dans le Haut-Bugey">
-        <p className="mb-6 max-w-2xl text-sm text-foreground/70">
+      <Section id="communes-desservies" title="Communes desservies dans le Haut-Bugey">
+        <p className="mb-6 max-w-3xl text-sm text-foreground/70">
           Basé à Oyonnax, {BUSINESS.name} intervient rapidement dans toutes les communes de
-          l&apos;agglomération et du Haut-Bugey.
+          l&apos;agglomération et du Haut-Bugey, avec un délai d&apos;intervention court quelle
+          que soit votre commune de résidence.
         </p>
-        <ZoneGrid />
+        <div className="grid gap-6 sm:grid-cols-2">
+          <div>
+            <h3 className="text-lg font-bold text-foreground">Oyonnax &amp; proximité</h3>
+            <p className="mt-2 text-sm text-foreground/70">
+              Les communes limitrophes d&apos;Oyonnax —{" "}
+              <Link href="/taxi-bellignat" className="text-brand hover:underline">
+                Bellignat
+              </Link>
+              ,{" "}
+              <Link href="/taxi-arbent" className="text-brand hover:underline">
+                Arbent
+              </Link>{" "}
+              et{" "}
+              <Link href="/taxi-groissiat" className="text-brand hover:underline">
+                Groissiat
+              </Link>{" "}
+              — sont à quelques minutes seulement de notre base. Cette proximité nous permet
+              d&apos;assurer une prise en charge quasi immédiate, que ce soit pour un aller-retour
+              conventionné vers un centre de soins, une course de tous les jours ou un départ
+              programmé vers une gare ou un aéroport. Ces communes forment le cœur de
+              l&apos;agglomération oyonnaxienne, historiquement liée à l&apos;industrie de la
+              plasturgie, et concentrent une part importante de nos trajets quotidiens.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-lg font-bold text-foreground">Bassin de Nantua</h3>
+            <p className="mt-2 text-sm text-foreground/70">
+              En direction du lac de Nantua, nous desservons également{" "}
+              <Link href="/taxi-montreal-la-cluse" className="text-brand hover:underline">
+                Montréal-la-Cluse
+              </Link>{" "}
+              et{" "}
+              <Link href="/taxi-izernore" className="text-brand hover:underline">
+                Izernore
+              </Link>
+              , un peu plus excentrées mais parfaitement intégrées à notre zone d&apos;intervention
+              habituelle. Ce secteur, au pied du massif du Jura, concentre lui aussi des demandes
+              régulières de transport médical assis ainsi que des trajets vers Nantua, Bourg-en-Bresse
+              ou les gares environnantes. Notre tarification reste transparente quelle que soit la
+              distance parcourue depuis Oyonnax.
+            </p>
+          </div>
+        </div>
+        <div className="mt-8">
+          <ZoneGrid />
+        </div>
+      </Section>
+
+      <Section title="Principales liaisons & gares TGV" muted>
+        <div className="grid gap-6 sm:grid-cols-2">
+          <div className="rounded-2xl border border-border-subtle bg-surface p-5">
+            <h3 className="text-lg font-bold text-foreground">
+              Transferts Aéroports (Genève, Lyon)
+            </h3>
+            <p className="mt-2 text-sm text-foreground/70">
+              Pour vos départs ou arrivées de vol, nous assurons des liaisons directes depuis
+              Oyonnax vers l&apos;
+              <Link href="/taxi-oyonnax-aeroport-geneve" className="text-brand hover:underline">
+                aéroport de Genève
+              </Link>{" "}
+              et vers l&apos;
+              <Link
+                href="/taxi-oyonnax-aeroport-lyon-st-exupery"
+                className="text-brand hover:underline"
+              >
+                aéroport Lyon-Saint Exupéry
+              </Link>
+              . Le choix du véhicule (Berline ou Van) dépend du nombre de passagers et de
+              bagages : nous vous conseillons au moment de la réservation. Sur ces trajets plus
+              longs, nous suivons l&apos;horaire de votre vol afin d&apos;ajuster l&apos;heure de
+              prise en charge en cas de retard, à l&apos;aller comme au retour.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-border-subtle bg-surface p-5">
+            <h3 className="text-lg font-bold text-foreground">
+              Liaisons Gares (Bellegarde TGV, Nurieux, Part-Dieu)
+            </h3>
+            <p className="mt-2 text-sm text-foreground/70">
+              Que vous partiez de la{" "}
+              <Link href="/taxi-oyonnax-gare-bellegarde-tgv" className="text-brand hover:underline">
+                gare TGV de Bellegarde-sur-Valserine
+              </Link>
+              , de la petite gare TER de Nurieux-Volognat ou que vous rejoigniez directement Lyon
+              Part-Dieu pour une correspondance grande ligne, nous organisons votre trajet en
+              tenant compte de l&apos;horaire de votre train. Une marge de sécurité est calculée
+              systématiquement pour les correspondances serrées, et nous assurons également votre
+              retour à l&apos;arrivée si vous nous communiquez votre numéro de train.
+            </p>
+          </div>
+        </div>
       </Section>
 
       <FAQSection
+        title="Foire aux questions sur notre service de taxi"
         items={[
           {
-            question: "Comment réserver un taxi conventionné CPAM à Oyonnax ?",
+            question: "Peut-on réserver un taxi à Oyonnax 24h/24 et 7j/7 ?",
             answer:
-              "Appelez-nous directement ou écrivez sur WhatsApp avec votre prescription médicale de transport. Nous organisons votre trajet aller-retour vers l'hôpital ou le centre de soins concerné.",
+              "Oui, Taxi Oyonnax est disponible en permanence, y compris la nuit, le dimanche et les jours fériés. Pour une course immédiate, appelez-nous directement ; pour un transfert programmé (gare, aéroport, rendez-vous médical), nous recommandons de réserver la veille afin de garantir votre créneau.",
           },
           {
-            question: "Taxi Oyonnax dessert-il l'aéroport de Genève et l'aéroport Lyon-Saint Exupéry ?",
+            question: "Peut-on payer directement à bord du taxi ?",
             answer:
-              "Oui, nous assurons des transferts en Berline ou en Van vers l'aéroport de Genève et l'aéroport Lyon-Saint Exupéry depuis Oyonnax et tout le Haut-Bugey, avec une réservation à l'avance recommandée.",
+              "Oui, nous acceptons le paiement à bord par carte bancaire ou en espèces pour vos courses classiques. Pour les trajets médicaux conventionnés CPAM, la facturation peut être adressée directement à l'Assurance Maladie en tiers payant, sur présentation de votre prescription médicale de transport.",
           },
           {
-            question: "Quelle est la différence entre la Berline et le Van ?",
+            question: "Comment fonctionne le transport CPAM avec Taxi Oyonnax ?",
             answer:
-              "La Berline accueille jusqu'à 4 personnes, idéale pour les trajets individuels et le transport médical. Le Van accueille jusqu'à 8 personnes et convient aux familles, groupes et bagages volumineux.",
+              "Sur prescription médicale de transport (PMT) établie par votre médecin, nous organisons votre trajet aller-retour vers l'hôpital ou le centre de soins concerné, avec une facturation conforme à la convention signée avec l'Assurance Maladie. Consultez notre page dédiée au taxi conventionné CPAM à Oyonnax pour le détail des démarches.",
           },
           {
-            question: "Quels moyens de paiement acceptez-vous ?",
+            question: "Puis-je transporter des bagages volumineux ou du matériel médical ?",
             answer:
-              "Nous acceptons les principaux moyens de paiement ainsi que la prise en charge directe de l'Assurance Maladie pour les transports médicaux conventionnés, sous réserve d'éligibilité.",
+              "Oui, notre Van VIP (1 à 8 personnes) dispose d'un volume de coffre adapté aux bagages volumineux, sacs de ski ou équipements médicaux (fauteuil pliant, déambulateur). Précisez votre besoin lors de la réservation afin que nous vous proposions le véhicule le plus adapté, Berline ou Van.",
           },
         ]}
       />

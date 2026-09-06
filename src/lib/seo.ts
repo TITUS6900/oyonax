@@ -11,7 +11,7 @@ export function buildMetadata({
   path: string;
 }): Metadata {
   const url = `${BUSINESS.domain}${path}`;
-  const logoUrl = `${BUSINESS.domain}/logo.png`;
+  const ogImageUrl = `${BUSINESS.domain}/og-image.png`;
 
   return {
     title,
@@ -26,13 +26,13 @@ export function buildMetadata({
       siteName: BUSINESS.name,
       locale: "fr_FR",
       type: "website",
-      images: [{ url: logoUrl, width: 2816, height: 1536, alt: BUSINESS.name }],
+      images: [{ url: ogImageUrl, width: 2816, height: 1536, alt: BUSINESS.name }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [logoUrl],
+      images: [ogImageUrl],
     },
     robots: {
       index: true,

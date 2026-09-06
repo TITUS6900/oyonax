@@ -37,6 +37,11 @@ const facility: MedicalFacility = {
       answer:
         "Oui, indiquez-nous l'heure approximative de fin de votre rendez-vous : nous organisons votre retour vers Oyonnax ou toute autre commune du Haut-Bugey.",
     },
+    {
+      question: "Desservez-vous tous les sites des Hospices Civils de Lyon ?",
+      answer:
+        "Oui, nous assurons les trajets vers l'ensemble des sites HCL (Croix-Rousse, Édouard Herriot, Lyon Sud, etc.) ainsi que vers les cliniques privées lyonnaises, selon l'adresse indiquée sur votre prescription.",
+    },
   ],
 };
 

@@ -37,6 +37,11 @@ const facility: MedicalFacility = {
       answer:
         "Oui, indiquez-nous l'heure approximative de fin de votre rendez-vous : nous organisons votre retour vers Oyonnax ou toute autre commune du secteur.",
     },
+    {
+      question: "Le trajet vers le Centre Hospitalier Haut-Bugey est-il facturé en tiers payant ?",
+      answer:
+        "Dans la majorité des cas, oui : nous facturons directement l'Assurance Maladie sur présentation de votre prescription médicale de transport, sans avance de frais de votre part.",
+    },
   ],
 };
 

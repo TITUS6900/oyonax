@@ -7,8 +7,6 @@
 export const BUSINESS = {
   name: "TAXI OYONNAX",
   tagline: "Votre taxi conventionné à Oyonnax et dans le Haut-Bugey",
-  license: "N°181",
-  licenseAuthority: "Mairie d'Oyonnax",
   phoneDisplay: "07 71 17 06 71",
   phoneHref: "tel:+33771170671",
   whatsappNumber: "33771170671",

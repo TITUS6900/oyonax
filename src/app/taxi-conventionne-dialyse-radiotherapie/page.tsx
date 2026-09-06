@@ -37,6 +37,11 @@ const facility: MedicalFacility = {
       answer:
         "Oui, sur prescription médicale de transport, ces trajets peuvent être pris en charge par l'Assurance Maladie, selon votre situation et l'éloignement du centre de soins.",
     },
+    {
+      question: "Le véhicule est-il adapté à un fauteuil roulant pliant ?",
+      answer:
+        "Oui, notre Berline comme notre Van peuvent accueillir un fauteuil roulant pliant ou un déambulateur dans le coffre : signalez-le simplement lors de la réservation.",
+    },
   ],
 };
 

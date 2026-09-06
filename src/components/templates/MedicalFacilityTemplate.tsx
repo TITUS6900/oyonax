@@ -110,7 +110,68 @@ export default function MedicalFacilityTemplate({ facility }: { facility: Medica
         </p>
       </Section>
 
-      <FAQSection items={facility.faq} />
+      <Section title="Modalités de prise en charge CPAM à Oyonnax" muted>
+        <div className="grid gap-6 sm:grid-cols-2">
+          <div>
+            <h3 className="text-lg font-bold text-foreground">
+              Documents obligatoires (PMT &amp; Attestation)
+            </h3>
+            <p className="mt-2 text-sm text-foreground/70">
+              Pour bénéficier de la prise en charge de votre trajet vers {facility.facilityName},
+              votre médecin doit établir une prescription médicale de transport (PMT) avant la
+              date du rendez-vous, sauf situation d&apos;urgence. Le jour du transport, munissez-vous
+              de cette prescription, de votre carte Vitale à jour ou de votre attestation de droits,
+              ainsi que d&apos;une pièce d&apos;identité. Ces documents nous permettent
+              d&apos;établir la facturation directement auprès de l&apos;Assurance Maladie, sans
+              avance de frais de votre part dans la majorité des cas.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-lg font-bold text-foreground">
+              Tiers payant et prise en charge à 100&nbsp;%
+            </h3>
+            <p className="mt-2 text-sm text-foreground/70">
+              Grâce au tiers payant, {BUSINESS.name} facture directement votre trajet à
+              l&apos;Assurance Maladie : vous n&apos;avancez pas les frais de transport. Le taux de
+              remboursement dépend de votre situation personnelle : les patients en affection
+              longue durée (ALD) ou hospitalisés bénéficient généralement d&apos;une prise en
+              charge à 100&nbsp;%, tandis qu&apos;un ticket modérateur peut rester à votre charge
+              dans d&apos;autres cas. Votre prescription médicale de transport précise le niveau de
+              prise en charge applicable à votre trajet.
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      <Section title="Centres médicaux et hôpitaux desservis">
+        <div className="grid gap-6 sm:grid-cols-2">
+          <div className="rounded-2xl border border-border-subtle bg-surface p-5">
+            <h3 className="text-base font-bold text-foreground">
+              Établissements locaux (CH Haut-Bugey, Clinique du Val d&apos;Ain)
+            </h3>
+            <p className="mt-2 text-sm text-foreground/70">
+              Pour vos rendez-vous de proximité, nous assurons les trajets vers le Centre
+              Hospitalier Haut-Bugey à Oyonnax et vers la Clinique du Val d&apos;Ain, ainsi que vers
+              les cabinets de spécialistes et laboratoires du secteur. Ces trajets courts
+              représentent une part importante de nos transports conventionnés au quotidien.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-border-subtle bg-surface p-5">
+            <h3 className="text-base font-bold text-foreground">
+              Centres de référence régionaux (HCL Lyon, CH Bourg-en-Bresse)
+            </h3>
+            <p className="mt-2 text-sm text-foreground/70">
+              Pour les consultations spécialisées ou les hospitalisations nécessitant un plateau
+              technique plus important, nous assurons également les trajets longue distance vers
+              les Hospices Civils de Lyon (HCL), le Centre Hospitalier de Bourg-en-Bresse (Fleyriat)
+              et le Centre Hospitalier Annecy Genevois, avec une organisation adaptée au temps de
+              trajet et à l&apos;horaire de votre rendez-vous.
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      <FAQSection title="Questions fréquentes sur le transport médical VSL" items={facility.faq} />
 
       <CTASection
         title={`Réservez votre taxi conventionné vers ${facility.shortName}`}

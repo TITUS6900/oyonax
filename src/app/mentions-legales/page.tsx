@@ -76,6 +76,13 @@ export default function Page() {
               éléments, par quelque procédé que ce soit, sans autorisation écrite préalable, est
               interdite et constitutive de contrefaçon.
             </p>
+            <p className="mt-2">
+              Le Site peut contenir des liens hypertextes vers des sites tiers (réseaux sociaux,
+              partenaires, services de cartographie). {LEGAL_ENTITY.companyName} n&apos;exerce
+              aucun contrôle sur le contenu de ces sites et décline toute responsabilité quant à
+              leur contenu, leur disponibilité ou leurs pratiques en matière de données
+              personnelles.
+            </p>
           </div>
 
           <div>
@@ -113,6 +120,12 @@ export default function Page() {
               commerciales n&apos;est déposé sans votre consentement préalable, conformément à la
               réglementation applicable.
             </p>
+            <p className="mt-2">
+              Vous pouvez à tout moment configurer votre navigateur pour refuser l&apos;ensemble
+              des cookies ou être averti avant leur dépôt, en modifiant les paramètres de
+              confidentialité de votre navigateur internet. Ce réglage peut toutefois affecter
+              certaines fonctionnalités d&apos;affichage du Site.
+            </p>
           </div>
 
           <div>
@@ -125,6 +138,12 @@ export default function Page() {
               préavis. Elles ne sauraient engager la responsabilité de {LEGAL_ENTITY.companyName}{" "}
               en cas d&apos;erreur, d&apos;omission, ou de conditions de circulation
               exceptionnelles affectant un trajet.
+            </p>
+            <p className="mt-2">
+              De même, la disponibilité du service de taxi peut être affectée par des
+              circonstances exceptionnelles indépendantes de la volonté de{" "}
+              {LEGAL_ENTITY.companyName} (conditions météorologiques, incidents de circulation,
+              cas de force majeure), sans que sa responsabilité puisse être engagée à ce titre.
             </p>
           </div>
 

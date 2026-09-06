@@ -51,15 +51,6 @@ export function getTaxiServiceSchema(opts?: { areaServed?: string[]; url?: strin
         { "@type": "AdministrativeArea", name: "Haut-Bugey" },
       ],
     openingHoursSpecification: baseOpeningHours,
-    hasCredential: {
-      "@type": "EducationalOccupationalCredential",
-      credentialCategory: "Licence de taxi (ADS)",
-      identifier: BUSINESS.license,
-      recognizedBy: {
-        "@type": "Organization",
-        name: BUSINESS.licenseAuthority,
-      },
-    },
   };
 }
 

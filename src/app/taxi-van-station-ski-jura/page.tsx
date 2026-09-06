@@ -37,6 +37,11 @@ const facility: TransportFacility = {
       answer:
         "Les deux formules sont possibles : contactez-nous pour organiser votre départ le matin et, si besoin, votre retour en fin de journée.",
     },
+    {
+      question: "Le tarif change-t-il selon la station de ski choisie ?",
+      answer:
+        "Oui, le tarif dépend de la distance jusqu'à la station : indiquez-nous votre destination précise pour une estimation avant réservation.",
+    },
   ],
 };
 

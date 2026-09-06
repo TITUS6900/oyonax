@@ -37,6 +37,11 @@ const facility: MedicalFacility = {
       answer:
         "Oui, indiquez-nous l'heure approximative de fin de votre rendez-vous : nous organisons votre retour vers Oyonnax ou toute autre commune du Haut-Bugey.",
     },
+    {
+      question: "Un accompagnant peut-il monter à bord avec le patient ?",
+      answer:
+        "Oui, un accompagnant peut voyager avec vous dans la limite des places disponibles du véhicule, en Berline comme en Van pour les trajets familiaux.",
+    },
   ],
 };
 

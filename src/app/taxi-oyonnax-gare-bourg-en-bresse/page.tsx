@@ -37,6 +37,11 @@ const facility: TransportFacility = {
       answer:
         "Le tarif dépend de la distance parcourue et de l'heure du trajet, conformément à la réglementation applicable aux taxis. Contactez-nous pour une estimation avant réservation.",
     },
+    {
+      question: "Peut-on réserver un aller-retour dans la même journée ?",
+      answer:
+        "Oui, indiquez-nous l'heure de votre train retour : nous organisons votre prise en charge à la Gare de Bourg-en-Bresse dès votre arrivée.",
+    },
   ],
 };
 

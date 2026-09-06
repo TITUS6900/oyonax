@@ -70,11 +70,44 @@ export default function CommuneTemplate({ commune }: { commune: Commune }) {
 
       <VehiclesSection />
 
+      <Section title={`Trajets fréquents depuis ${commune.name}`}>
+        <div className="grid gap-6 sm:grid-cols-2">
+          <div className="rounded-2xl border border-border-subtle bg-surface p-5">
+            <h3 className="text-base font-bold text-foreground">
+              Vers les hôpitaux et centres de soins
+            </h3>
+            <p className="mt-2 text-sm text-foreground/70">
+              Depuis {commune.name}, nous organisons vos trajets conventionnés CPAM vers le Centre
+              Hospitalier Haut-Bugey à Oyonnax ainsi que vers les centres de référence régionaux
+              (Hospices Civils de Lyon, Centre Hospitalier de Bourg-en-Bresse, Centre Hospitalier
+              Annecy Genevois), sur présentation de votre prescription médicale de transport. Le
+              trajet jusqu&apos;à notre base d&apos;Oyonnax ne rallonge que très peu votre parcours,
+              puisque nous venons vous chercher directement à votre adresse.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-border-subtle bg-surface p-5">
+            <h3 className="text-base font-bold text-foreground">Vers les gares et aéroports</h3>
+            <p className="mt-2 text-sm text-foreground/70">
+              Pour vos départs en train ou en avion, nous assurons également les transferts depuis{" "}
+              {commune.name} vers la gare TGV de Bellegarde-sur-Valserine, la gare de
+              Bourg-en-Bresse, ainsi que les aéroports de Genève et de Lyon-Saint Exupéry, en
+              Berline ou en Van selon le nombre de passagers et de bagages. Une réservation à
+              l&apos;avance est recommandée pour ces trajets plus longs.
+            </p>
+          </div>
+        </div>
+      </Section>
+
       <Section title={`Pourquoi choisir Taxi Oyonnax à ${commune.name} ?`} muted>
+        <p className="mb-4 max-w-2xl text-sm text-foreground/70">
+          Habitants de {commune.name}, vous bénéficiez d&apos;un service de taxi de proximité,
+          réactif et transparent sur ses tarifs, aussi bien pour un déplacement du quotidien que
+          pour un trajet médical conventionné ou un départ vers une gare ou un aéroport.
+        </p>
         <ul className="grid gap-3 sm:grid-cols-2">
           {[
             `Basé à Oyonnax, à ${commune.distanceKm} km de ${commune.name} : prise en charge rapide.`,
-            `Licence de taxi ${BUSINESS.license} (${BUSINESS.licenseAuthority}).`,
+            "Chauffeur professionnel expérimenté & véhicules récents",
             "Conventionnement CPAM pour le transport de patients assis (VSL / taxi).",
             "Réservation simple par téléphone ou WhatsApp, confirmation immédiate.",
             "Berline ou Van selon le nombre de passagers et de bagages.",
@@ -101,6 +134,10 @@ export default function CommuneTemplate({ commune }: { commune: Commune }) {
           {
             question: "Peut-on réserver un trajet vers la gare ou l'aéroport à l'avance ?",
             answer: "Oui, nous recommandons de réserver votre transfert gare ou aéroport à l'avance par téléphone ou WhatsApp afin de garantir votre créneau, en particulier pour les vols et TGV matinaux.",
+          },
+          {
+            question: `Faut-il réserver longtemps à l'avance pour un trajet depuis ${commune.name} ?`,
+            answer: "Pour une course immédiate, un simple appel suffit généralement. Pour un rendez-vous médical, une gare ou un aéroport, nous conseillons de réserver la veille afin de garantir la disponibilité du véhicule le plus adapté (Berline ou Van).",
           },
         ]}
       />

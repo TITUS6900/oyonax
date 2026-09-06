@@ -40,6 +40,11 @@ export default function Page() {
       />
 
       <Section title="Comment réserver votre taxi ?">
+        <p className="mb-4 max-w-2xl text-sm text-foreground/70">
+          Réserver un taxi à Oyonnax tient en trois étapes simples, que votre trajet soit une
+          course immédiate, un transfert programmé vers une gare ou un aéroport, ou un transport
+          médical conventionné CPAM nécessitant une prescription médicale de transport.
+        </p>
         <ol className="grid gap-4 sm:grid-cols-3">
           {[
             {
@@ -64,6 +69,11 @@ export default function Page() {
       </Section>
 
       <Section title="Contactez-nous directement" muted>
+        <p className="mb-4 max-w-2xl text-sm text-foreground/70">
+          Trois moyens de contact rapides sont à votre disposition : privilégiez l&apos;appel
+          téléphonique pour une prise en charge immédiate, WhatsApp pour un échange écrit
+          pratique, ou l&apos;e-mail pour une demande d&apos;information sans urgence.
+        </p>
         <div className="grid gap-4 sm:grid-cols-3">
           <a
             href={BUSINESS.phoneHref}
@@ -95,6 +105,11 @@ export default function Page() {
       </Section>
 
       <Section title="Informations à préparer avant d'appeler">
+        <p className="mb-4 max-w-2xl text-sm text-foreground/70">
+          Avoir ces quelques informations sous la main au moment de votre appel nous permet de
+          vous répondre plus rapidement et de vous proposer d&apos;emblée le véhicule et le
+          créneau les mieux adaptés à votre situation.
+        </p>
         <ul className="grid gap-3 sm:grid-cols-2">
           {[
             "Adresse exacte de prise en charge et destination",
@@ -110,6 +125,33 @@ export default function Page() {
             </li>
           ))}
         </ul>
+      </Section>
+
+      <Section title="Zones et délais d'intervention">
+        <div className="grid gap-6 sm:grid-cols-2">
+          <div className="rounded-2xl border border-border-subtle bg-surface p-5">
+            <h3 className="text-base font-bold text-foreground">
+              Dans l&apos;agglomération d&apos;Oyonnax
+            </h3>
+            <p className="mt-2 text-sm text-foreground/70">
+              Pour une course dans Oyonnax et les communes limitrophes (Bellignat, Arbent,
+              Groissiat, Martignat, Géovreisset), le délai d&apos;intervention est généralement
+              très court après votre appel, sous réserve de disponibilité du véhicule. Un appel
+              direct reste le moyen le plus rapide d&apos;obtenir une prise en charge immédiate.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-border-subtle bg-surface p-5">
+            <h3 className="text-base font-bold text-foreground">
+              Trajets longue distance et programmés
+            </h3>
+            <p className="mt-2 text-sm text-foreground/70">
+              Pour un transfert vers une gare, un aéroport ou un rendez-vous médical conventionné,
+              nous recommandons de réserver la veille afin de garantir la disponibilité du
+              véhicule le plus adapté (Berline ou Van) et d&apos;organiser précisément l&apos;heure
+              de prise en charge en fonction de votre horaire de train, de vol ou de consultation.
+            </p>
+          </div>
+        </div>
       </Section>
 
       <VehiclesSection muted />
@@ -130,6 +172,11 @@ export default function Page() {
             question: "Puis-je annuler ou modifier ma réservation ?",
             answer:
               "Oui, contactez-nous par téléphone ou WhatsApp dès que possible pour annuler ou modifier l'heure ou le véhicule de votre réservation.",
+          },
+          {
+            question: "Faut-il réserver différemment pour un trajet médical CPAM ?",
+            answer:
+              "Précisez simplement que le trajet est conventionné et munissez-vous de votre prescription médicale de transport : nous organisons la prise en charge et la facturation en tiers payant de la même façon qu'une réservation classique.",
           },
         ]}
       />

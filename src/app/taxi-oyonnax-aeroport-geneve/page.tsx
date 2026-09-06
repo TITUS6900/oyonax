@@ -37,6 +37,11 @@ const facility: TransportFacility = {
       answer:
         "Contactez-nous en précisant le nombre de passagers et de bagages afin que nous puissions vous proposer la Berline ou le Van le plus adapté.",
     },
+    {
+      question: "Prenez-vous en charge les paiements en francs suisses ?",
+      answer:
+        "Nous facturons en euros, mais nous pouvons vous indiquer une estimation avant le départ afin d'organiser votre moyen de paiement en conséquence.",
+    },
   ],
 };
 

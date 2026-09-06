@@ -37,6 +37,11 @@ const facility: MedicalFacility = {
       answer:
         "Comptez environ 45 minutes de route entre Oyonnax et Bourg-en-Bresse, selon le trafic.",
     },
+    {
+      question: "Intervenez-vous pour un transport non programmé vers les urgences ?",
+      answer:
+        "Nous faisons notre possible pour répondre rapidement à toute demande non planifiée : appelez-nous directement pour connaître notre disponibilité immédiate vers le Centre Hospitalier de Fleyriat.",
+    },
   ],
 };
 
