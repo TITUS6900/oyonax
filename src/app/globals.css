@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fafaf9;
+  --foreground: #1c1917;
+  --brand: #0284c7;
+  --brand-dark: #0f172a;
+  --brand-light: #0ea5e9;
+  --medical: #0369a1;
+  --medical-light: #e0f2fe;
+  --accent: #d97706;
+  --accent-light: #fef3c7;
+  --surface: #ffffff;
+  --surface-muted: #f5f5f4;
+  --border-subtle: #e7e5e4;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-light: var(--brand-light);
+  --color-medical: var(--medical);
+  --color-medical-light: var(--medical-light);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border-subtle: var(--border-subtle);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0b0f17;
+    --foreground: #f5f5f4;
+    --surface: #131a26;
+    --surface-muted: #1b2432;
+    --border-subtle: #2b3546;
+    --medical-light: #082f49;
+    --accent-light: #451a03;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Safe-area padding for the fixed bottom app navigation on notched phones */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Reserve space so the fixed bottom nav (+ its raised call button) never
+   covers content on mobile */
+.pb-quickbar {
+  padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 768px) {
+  .pb-quickbar {
+    padding-bottom: 0;
+  }
+}
+
+/* Cookie banner sits above the fixed bottom nav on mobile, flush to the
+   viewport bottom on desktop (no bottom nav there) */
+.cookie-banner-offset {
+  bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 768px) {
+  .cookie-banner-offset {
+    bottom: 0;
+  }
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
