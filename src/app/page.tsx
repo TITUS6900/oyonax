@@ -44,7 +44,12 @@ export default function Home() {
             <p className="mt-2 text-sm text-foreground/70">
               Sur prescription médicale, nous assurons vos trajets vers les centres hospitaliers du
               Haut-Bugey, de Lyon, Bourg-en-Bresse et Annecy, ainsi que les séances de dialyse et de
-              radiothérapie. Prise en charge CPAM du transport de patients assis.
+              radiothérapie. Prise en charge CPAM du transport de patients assis, ainsi qu&apos;un
+              service de{" "}
+              <Link href="/taxi-tpmr-oyonnax" className="text-brand hover:underline">
+                transport PMR en fauteuil roulant
+              </Link>
+              .
             </p>
             <ul className="mt-4 space-y-1 text-sm text-foreground/70">
               {medicalLinks.map((item) => (
@@ -94,6 +99,7 @@ export default function Home() {
           {[
             "Chauffeur professionnel expérimenté & véhicules récents",
             "Conventionné CPAM pour le transport de patients assis (VSL)",
+            "Véhicule adapté au transport PMR (fauteuil roulant)",
             "Disponible 24h/24, 7j/7, y compris jours fériés",
             "Réservation immédiate par téléphone ou WhatsApp",
             "Berline ou Van selon vos besoins (passagers, bagages)",
